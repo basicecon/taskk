@@ -1,0 +1,104 @@
+<!doctype html>
+  <head>
+    <link rel="stylesheet" href="static/style.css">
+    <script src="src/lib/jquery-1.6.4.min.js"></script>
+    <script src="src/lib/jquery-ui.min.js"></script>
+    <script src="src/application.js"></script>
+    <script src="src/adapter.js"></script>
+  </head>
+  <body>
+  <div id='taskkapp'>
+    <div id='logo'>
+      <h1>taskk</h1>
+    </div>
+    <div class='content'>
+
+      <div id='add-todo'>
+        <input id='new-todo' placeholder='Add a new todo' type='text' />
+      </div>
+
+      <div id="datee">   
+        <ul id="datee-list"></ul>
+        <div id="new-datee-item" class="datee-item">
+          <input id='new-datee' placeholder='Add Date' type='text' />
+        </div>
+      </div>
+
+      <div class="clear"></div>
+    </div>
+
+
+    <div id="backup-note">
+      Note: Taskk (for now) uses local storage, which means it stores all of your data in your browser. <a href="#" id="data-backup">Back it up</a>.
+    </div>
+
+  </div>
+
+  <div id="footer">
+    Designed and built by <a href="http://www.kathywang.me">Kathy Wang</a>. <a href="http://www.kathywang.me/taskk">What is Taskk?</a>
+  </div>
+
+    <script type="text/template" id="todo-template">
+      <div class="todo">
+
+        <div class="display">
+
+          <span class="todo-text"></span>
+
+          
+          <span class="mood"></span>
+<!--
+          <label class="doneCheckBox">
+            <input type="checkbox" name="test" />
+            <span></span>
+          </label>
+-->
+          <span class="status"></span>
+
+          <span class="move-up"></span>
+          <span class="move-down"></span>
+            
+          <span class="todo-destroy"></span>
+
+        </div>
+
+        <div class="edit">
+          <input class="todo-input" type="text" value="" />
+        </div>
+
+      </div>
+
+    </script>
+
+     <script type="text/template" id="datee-template">
+      <div class="datee">
+        <div class="display">
+          <span class="datee-name"></span>
+          <span class="editing-name">
+            <input class="datee-input" type="text" value="" />
+          </span>
+          <span class="datee-destroy"></span>
+          <ul class="datee-todos">
+          </ul>
+        </div>
+        <div class="edit">
+        </div>
+      </div>
+    </script>
+
+
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-17135760-6']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+  </body>
+  </html>
